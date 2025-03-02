@@ -269,7 +269,7 @@ local function open_win() -- {{{
   vim.cmd('resize ' .. lines)
   vim.cmd([[
   setlocal buftype=nofile bufhidden=wipe nobuflisted nolist noswapfile nowrap cursorline nospell nonu norelativenumber winfixheight nomodifiable
-  set filetype=SpaceVimTodoManager
+  set filetype=todo-nvim
   ]])
   bufnr = vim.fn.bufnr('%')
   update_todo_content()
