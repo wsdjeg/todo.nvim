@@ -279,6 +279,9 @@ local function open_win() -- {{{
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<C-q>', '', {
     callback = apply_to_quickfix,
   })
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'q', '', {
+    vim.cmd('quit'),
+  })
 end
 -- }}}
 
