@@ -280,7 +280,9 @@ local function open_win() -- {{{
     callback = apply_to_quickfix,
   })
   vim.api.nvim_buf_set_keymap(bufnr, 'n', 'q', '', {
-    vim.cmd('quit'),
+    callback = function()
+      vim.cmd('quit')
+    end,
   })
 end
 -- }}}
