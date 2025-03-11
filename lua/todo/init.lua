@@ -305,4 +305,10 @@ function M.on_cwd_changed()
   end
 end
 
+function M.setup(opt)
+  opt = opt or {}
+  labels = opt.labels or labels
+  prefix = opt.prefix or prefix
+end
+
 return M

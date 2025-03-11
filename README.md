@@ -14,6 +14,10 @@ require('plug').add({
     'wsdjeg/todo.nvim',
 
     config = function()
+      require('todo').setup({
+        labels = { 'fixme', 'question', 'todo', 'idea' },
+        prefix = '@',
+      })
       vim.keymap.set('n', '<leader>ao', '<cmd>lua require("todo").list()<cr>', { silent = true })
     end,
   },
